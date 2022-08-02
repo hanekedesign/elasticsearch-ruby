@@ -101,7 +101,6 @@ module Elasticsearch
                response.body
              end
       version = body.dig('version', 'number')
-      verify_with_version_or_header(version, response.headers)
     rescue StandardError => e
       warn(VALIDATION_WARNING)
       raise e
